@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <title>Héritage - Antique Shop</title>
-  <link rel="stylesheet" href="/assets/css/style.min.css">
-</head><body>
+  <head>
+    <meta charset="utf-8">
+    <title>Héritage - Antique Shop</title>
+    <link rel="stylesheet" href="/assets/css/style.min.css">
+  </head><body>
 
 <header>
 
@@ -19,7 +19,9 @@
 </nav>
 </header>
 <section class="hero">
-    <img src="src/assets/img/hero.png" alt="Interior Clássico Héritage" class="hero-img">
+    <figure class="hero-img-container">
+        <img src="src/assets/img/hero.png" alt="Interior Clássico Héritage" class="hero-img">
+    </figure>
     
     <div class="hero-overlay"></div>
 
@@ -37,44 +39,49 @@
         </header>
 
         <div class="product-grid">
+            <!-- Produto 1 -->
             <article class="product-card">
-                <div class="product-image">
-                    <img src="src/assets/img/lamp.png" alt="Louis XV Chair">
-                    <span class="badge">Late 19th Century</span>
-                </div>
+                <!-- Trocámos a div por figure -->
+                <figure class="product-image">
+                    <img src="src/assets/img/lamp.png" alt="Tiffany Table Lamp">
+                    <figcaption class="badge">Late 19th Century</figcaption>
+                </figure>
                 <div class="product-info">
                     <h3>Tiffany Table Lamp</h3>
                     <p class="price">€2,400</p>
                 </div>
             </article>
 
+            <!-- Produto 2 -->
             <article class="product-card">
-                <div class="product-image">
-                    <img src="src/assets/img/chair.png" alt="Baroque Clock">
-                    <span class="badge">18th Century</span>
-                </div>
+                <figure class="product-image">
+                    <img src="src/assets/img/chair.png" alt="Georgian Armchair">
+                    <figcaption class="badge">18th Century</figcaption>
+                </figure>
                 <div class="product-info">
                     <h3>Georgian Armchair</h3>
                     <p class="price">€3,200</p>
                 </div>
             </article>
 
+            <!-- Produto 3 -->
             <article class="product-card">
-                <div class="product-image">
-                    <img src="src/assets/img/vanity.png" alt="Victorian Dresser">
-                    <span class="badge">19th Century</span>
-                </div>
+                <figure class="product-image">
+                    <img src="src/assets/img/vanity.png" alt="Dressing Table">
+                    <figcaption class="badge">19th Century</figcaption>
+                </figure>
                 <div class="product-info">
-                    <h3>Dressing Table </h3>
+                    <h3>Dressing Table</h3>
                     <p class="price">€4,800</p>
                 </div>
             </article>
 
+            <!-- Produto 4 -->
             <article class="product-card">
-                <div class="product-image">
-                    <img src="src/assets/img/portrait.png" alt="Empire Candelabra">
-                    <span class="badge">18th Century</span>
-                </div>
+                <figure class="product-image">
+                    <img src="src/assets/img/portrait.png" alt="Classical Portrait">
+                    <figcaption class="badge">18th Century</figcaption>
+                </figure>
                 <div class="product-info">
                     <h3>Classical Portrait</h3>
                     <p class="price">€5,900</p>
@@ -88,7 +95,9 @@
         <h2 class="mission-title">Where History Meets Elegance</h2>
         <div class="mission-text">
             <p>Since 1982, Héritage has been a sanctuary for the world's finest antiques and decorative arts. We believe that true luxury lies not in the new, but in the enduring beauty of objects that have witnessed history unfold.</p>
+            
             <p>Our curators travel across Europe and beyond, meticulously selecting pieces that embody exceptional craftsmanship, provenance, and artistic merit. From Baroque grandeur to Art Nouveau fluidity, each acquisition represents a chapter in the ongoing narrative of human creativity.</p>
+            
             <p>We don't just sell antiques — we preserve legacies, honor artisans, and connect collectors with objects that will define their own heritage for generations to come.</p>
         </div>
     </div>
@@ -102,62 +111,67 @@
         </header>
 
         <div class="auctions-grid">
+            <!-- Leilão 1 -->
             <article class="auction-card">
-                <div class="auction-icon">
+                <figure class="auction-icon">
                     <img src="src/assets/svg/calender.svg" alt="Calendar">
-                </div>
+                </figure>
                 <div class="auction-content">
                     <span class="auction-date">28 APRIL 2026</span>
                     <h3>Spring Auction</h3>
                     <p>18th-century French furniture and decorative arts</p>
                     <div class="auction-meta">
                         <span>42 lots</span>
-                        <span><i class="clock-icon"></i> 14:00 GMT</span>
+                        <!-- Ícone do relógio atualizado para img simples (puramente decorativo) -->
+                        <span><img src="src/assets/svg/clock.svg" alt="" class="meta-icon"> 14:00 GMT</span>
                     </div>
                 </div>
             </article>
 
+            <!-- Leilão 2 -->
             <article class="auction-card">
-                <div class="auction-icon">
+                <figure class="auction-icon">
                     <img src="src/assets/svg/calender.svg" alt="Calendar">
-                </div>
+                </figure>
                 <div class="auction-content">
                     <span class="auction-date">15 MAY 2026</span>
                     <h3>Private Collection</h3>
                     <p>Sacred art and liturgical objects from European churches</p>
                     <div class="auction-meta">
                         <span>28 lots</span>
-                        <span><i class="clock-icon"></i> 15:00 GMT</span>
+                        <span><img src="src/assets/svg/clock.svg" alt="" class="meta-icon"> 15:00 GMT</span>
                     </div>
                 </div>
             </article>
 
+            <!-- Leilão 3 -->
             <article class="auction-card">
-                <div class="auction-icon">
+                <figure class="auction-icon">
                     <img src="src/assets/svg/calender.svg" alt="Calendar">
-                </div>
+                </figure>
                 <div class="auction-content">
                     <span class="auction-date">5 JUNE 2026</span>
                     <h3>European Rarities</h3>
                     <p>Antique clocks, scientific instruments, and curiosities</p>
                     <div class="auction-meta">
                         <span>35 lots</span>
-                        <span><i class="clock-icon"></i> 14:00 GMT</span>
+                        <span><img src="src/assets/svg/clock.svg" alt="" class="meta-icon"> 14:00 GMT</span>
                     </div>
                 </div>
             </article>
 
+            <!-- Leilão 4 -->
             <article class="auction-card">
-                <div class="auction-icon">
+                <figure class="auction-icon">
                     <img src="src/assets/svg/calender.svg" alt="Calendar">
-                </div>
+                </figure>
                 <div class="auction-content">
                     <span class="auction-date">22 JUNE 2026</span>
                     <h3>Summer Estate Sale</h3>
                     <p>Fine furniture, paintings, and silverware</p>
                     <div class="auction-meta">
                         <span>58 lots</span>
-                        <span><i class="clock-icon"></i> 13:00 GMT</span>
+                        <span><img src="src/assets/svg/clock.svg" alt="" class="meta-icon"> 13:00 GMT</span>
                     </div>
                 </div>
             </article>
@@ -172,50 +186,50 @@
         </header>
 
         <div class="gallery-grid">
-            <div class="gallery-item baroque">
-                <img src="src/assets/img/baroque.png" alt="Baroque">
-                <span class="style-label">Baroque</span>
-            </div>
+            <figure class="gallery-item baroque">
+                <img src="src/assets/img/baroque.png" alt="Baroque style furniture and decor details">
+                <figcaption class="style-label">Baroque</figcaption>
+            </figure>
 
-            <div class="gallery-item modernism">
-                <img src="src/assets/img/modernism.png" alt="Modernism">
-                <span class="style-label">Modernism</span>
-            </div>
+            <figure class="gallery-item modernism">
+                <img src="src/assets/img/modernism.png" alt="Modernism art piece">
+                <figcaption class="style-label">Modernism</figcaption>
+            </figure>
 
-            <div class="gallery-item renaissance">
-                <img src="src/assets/img/renaissance.png" alt="Renaissance">
-                <span class="style-label">Renaissance</span>
-            </div>
+            <figure class="gallery-item renaissance">
+                <img src="src/assets/img/renaissance.png" alt="Renaissance classical painting">
+                <figcaption class="style-label">Renaissance</figcaption>
+            </figure>
 
-            <div class="gallery-item sacred">
-                <img src="src/assets/img/sacred-art.png" alt="Sacred Art">
-                <span class="style-label">Sacred Art</span>
-            </div>
+            <figure class="gallery-item sacred">
+                <img src="src/assets/img/sacred-art.png" alt="Sacred Art historical object">
+                <figcaption class="style-label">Sacred Art</figcaption>
+            </figure>
 
-            <div class="gallery-item nouveau">
-                <img src="src/assets/img/art-nouveau.png" alt="Art Nouveau">
-                <span class="style-label">Art Nouveau</span>
-            </div>
+            <figure class="gallery-item nouveau">
+                <img src="src/assets/img/art-nouveau.png" alt="Art Nouveau organic lines detail">
+                <figcaption class="style-label">Art Nouveau</figcaption>
+            </figure>
 
-            <div class="gallery-item neoclassical">
-                <img src="src/assets/img/neoclassical.png" alt="Neoclassical">
-                <span class="style-label">Neoclassical</span>
-            </div>
+            <figure class="gallery-item neoclassical">
+                <img src="src/assets/img/neoclassical.png" alt="Neoclassical symmetric architecture or object">
+                <figcaption class="style-label">Neoclassical</figcaption>
+            </figure>
 
-            <div class="gallery-item abstract">
-                <img src="src/assets/img/abstract.png" alt="Abstract">
-                <span class="style-label">Abstract</span>
-            </div>
+            <figure class="gallery-item abstract">
+                <img src="src/assets/img/abstract.png" alt="Abstract painting canvas">
+                <figcaption class="style-label">Abstract</figcaption>
+            </figure>
 
-            <div class="gallery-item deco">
-                <img src="src/assets/img/art-deco.png" alt="Art Deco">
-                <span class="style-label">Art Deco</span>
-            </div>
+            <figure class="gallery-item deco">
+                <img src="src/assets/img/art-deco.png" alt="Art Deco geometric pattern object">
+                <figcaption class="style-label">Art Deco</figcaption>
+            </figure>
 
-            <div class="gallery-item rococo">
-                <img src="src/assets/img/rococo.png" alt="Rococo">
-                <span class="style-label">Rococo</span>
-            </div>
+            <figure class="gallery-item rococo">
+                <img src="src/assets/img/rococo.png" alt="Rococo exuberant ornamentation detail">
+                <figcaption class="style-label">Rococo</figcaption>
+            </figure>
         </div>
     </div>
 </section>
@@ -236,35 +250,35 @@
                 </div>
 
                 <div class="category-gallery">
-                    <div class="img-large">
+                    <figure class="img-large">
                         <img src="src/assets/img/cat-1.png" alt="Baroque Chandelier">
-                    </div>
-                    <div class="img-small">
+                    </figure>
+                    <figure class="img-small">
                         <img src="src/assets/img/cat-2.png" alt="Classic Sofa">
-                    </div>
-                    <div class="img-small">
+                    </figure>
+                    <figure class="img-small">
                         <img src="src/assets/img/cat-3.png" alt="Ornate Mirror">
-                    </div>
+                    </figure>
                 </div>
             </div>
 
             <div class="cat-2">
                 <div class="category-text">
-                    <h3>paintings</h3>
+                    <h3>Paintings</h3>
                     <p>From classical portraits to evocative landscapes, our painting collection captures the essence of human expression through the ages. Each canvas is a window into the past, offering a unique blend of historical significance and timeless aesthetic beauty.</p>
                     <a href="#" class="btn-outline">Explore Collection</a>
                 </div>
 
                 <div class="category-gallery">
-                    <div class="img-large">
-                        <img src="src/assets/img/cat-1.png" alt="Baroque Chandelier">
-                    </div>
-                    <div class="img-small">
-                        <img src="src/assets/img/cat-2.png" alt="Classic Sofa">
-                    </div>
-                    <div class="img-small">
-                        <img src="src/assets/img/cat-3.png" alt="Ornate Mirror">
-                    </div>
+                    <figure class="img-large">
+                        <img src="src/assets/img/cat-1.png" alt="Classical Portrait">
+                    </figure>
+                    <figure class="img-small">
+                        <img src="src/assets/img/cat-2.png" alt="Evocative Landscape">
+                    </figure>
+                    <figure class="img-small">
+                        <img src="src/assets/img/cat-3.png" alt="Oil Painting Detail">
+                    </figure>
                 </div>
             </div>
 
@@ -276,15 +290,15 @@
                 </div>
 
                 <div class="category-gallery">
-                    <div class="img-large">
-                        <img src="src/assets/img/cat-1.png" alt="Baroque Chandelier">
-                    </div>
-                    <div class="img-small">
-                        <img src="src/assets/img/cat-2.png" alt="Classic Sofa">
-                    </div>
-                    <div class="img-small">
-                        <img src="src/assets/img/cat-3.png" alt="Ornate Mirror">
-                    </div>
+                    <figure class="img-large">
+                        <img src="src/assets/img/cat-1.png" alt="Classical Marble Statue">
+                    </figure>
+                    <figure class="img-small">
+                        <img src="src/assets/img/cat-2.png" alt="Bronze Sculpture">
+                    </figure>
+                    <figure class="img-small">
+                        <img src="src/assets/img/cat-3.png" alt="Terracotta Bust">
+                    </figure>
                 </div>
             </div>    
         </div>
