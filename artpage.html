@@ -4,12 +4,24 @@
     <meta charset="utf-8">
     <title>Héritage - Antique Shop</title>
     <link rel="stylesheet" href="/assets/css/style.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@500&family=Playfair+Display:ital,wght@1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400&display=swap" rel="stylesheet">
   </head><body>
 
-<header>
+<header class="main-header">
+    <div class="container header-wrapper">
+        
+        <a href="homepage.html" class="logo">Héritage</a>
 
-    <a href="homepage.html" class="footer-logo-link"> <h1>HÉRITAGE</h1> </a>
-<nav>
+        <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+
+        <label for="menu-toggle" class="hamburger-button">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </label>
+
+<nav class="nav-menu">
     <ul>
       <li><a href="about.html">About us</a></li>
       <li><a href="artpage.html">Decor Lifestyle</a></li>
@@ -17,14 +29,15 @@
       <li><a href="contact.html">Contacts</a></li>
     </ul>
 </nav>
+    </div>
 </header>
-     
-        <section class="lifestyle-hero">
-              <div class="hero-image-container">
+     <main>
+        <section class="banner">
+              <figure class="hero-banner">
                   <img src="src/assets/img/hero-artpage.png" alt="Antique Interior">
-              </div>
-              <div class="container">
-                  <h1 class="page-title">DECOR AND <em>LIFESTYLE</em></h1>
+              </figure>
+              <div class="hero-title">
+                  <h1>DECOR AND <span class="page-title">LIFESTYLE</span></h1>
               </div>
         </section>
 
@@ -38,7 +51,6 @@
         <div class="product-grid">
             <!-- Produto 1 -->
             <article class="product-card">
-                <!-- Trocámos a div por figure -->
                 <figure class="product-image">
                     <img src="src/assets/img/lamp.png" alt="Tiffany Table Lamp">
                     <figcaption class="badge">Late 19th Century</figcaption>
@@ -214,6 +226,7 @@
                 </article>
             </div>
         </section>
+</main>
 
 
 <footer class="main-footer">

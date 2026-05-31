@@ -4,13 +4,13 @@
   <!-- @import "header" -->
 
 <main>
-  <div class="history-banner">
-    <img src="src/assets/img/Auction-Banner.png" alt="Gavel">
-  </div>
-  <div class="hero-title">
-    <h1>Our <span>Auctions</span></h1>
-    <p>Participate in the legacy of timeless craftsmanship</p>
-  </div>
+  <section class="banner">
+    <figure class="hero-banner"><img src="src/assets/img/Auction-Banner.png" alt="Gavel"></figure>
+    <div class="hero-title">
+      <h1>Our <span class="page-title">Auctions</span></h1>
+      <p>Participate in the legacy of timeless craftsmanship</p>
+    </div>
+  </section>
 
   <!-- @import "upcoming-auctions" -->
 
@@ -24,37 +24,37 @@
 
       <div class="sales-grid">
         <div class="sale-card">
-          <img src="src/assets/img/Baroque-Clock.png" alt="Imperial clock">
+          <figure><img src="src/assets/img/Baroque-Clock.png" alt="Imperial clock"></figure>
           <div class="sale-content">
-            <div class="sale-era">18th Century</div>
+            <p>18th Century</p>
             <h3>Imperial Baroque Clock</h3>
             <div class="sale-footer">
-              <div class="sale-price">€12,400</div>
-              <span>March 2026</span>
+              <p>€12,400</p>
+              <p>March 2026</p>
             </div>
           </div>
         </div>
 
         <div class="sale-card">
-          <img src="src/assets/img/Gilded-Mirror.png" alt="Victorian mirror">
+          <figure><img src="src/assets/img/Gilded-Mirror.png" alt="Victorian mirror"></figure>
           <div class="sale-content">
-            <div class="sale-era">19th Century</div>
+            <p>19th Century</p>
             <h3>Victorian Gilded Mirror</h3>
             <div class="sale-footer">
-              <div class="sale-price">€9,800</div>
-              <span>February 2026</span>
+              <p>€9,800</p>
+              <p>February 2026</p>
             </div>
           </div>
         </div>
 
         <div class="sale-card">
-          <img src="src/assets/img/Crystal-Chandelier.png" alt="Crystal chandelier">
+          <figure><img src="src/assets/img/Crystal-Chandelier.png" alt="Crystal chandelier"></figure>
             <div class="sale-content">
-              <div class="sale-era">Art Nouveau</div>
+              <p>Art Nouveau</p>
               <h3>Crystal Chandelier</h3>
               <div class="sale-footer">
-                <div class="sale-price">€15,200</div>
-                <span>January 2026</span>
+                <p>€15,200</p>
+                <p>January 2026</p>
               </div>
             </div>
         </div>
@@ -65,57 +65,57 @@
   <!-- PARTICIPATE -->
   <section class="container">
     <div class="participate-header">
-      <h2>How to <span>Participate</span></h2>
+      <h2>How to <span class="page-title">Participate</span></h2>
       <p>Important guidelines and rules for bidding at HÉRITAGE auctions</p>
     </div>
 
     <div class="participate-grid">
       <div class="participate-card">
-        <div class="participate-icon">◫</div>
-          <div>
-            <h3>Registration</h3>
-            <p>All bidders must register at least 48 hours before the auction. Valid identification and proof of funds may be required.</p>
-          </div>
-      </div>
-
-      <div class="participate-card">
-        <div class="participate-icon">⬡</div>
-          <div>
-            <h3>Buyer’s Premium</h3>
-            <p>A buyer’s premium of 25% is added to the hammer price. This includes insurance and handling.</p>
-          </div>
-      </div>
-
-      <div class="participate-card">
-        <div class="participate-icon">◷</div>
-          <div>
-            <h3>Payment Terms</h3>
-            <p>Payment is due within 7 business days of the auction. We accept bank transfers and major cards.</p>
-          </div>
-      </div>
-
-      <div class="participate-card">
-        <div class="participate-icon">⌁</div>
-        <div>
-          <h3>Bidding Increments</h3>
-          <p>Bidding increments vary by lot value. Typically €100 for lots under €5,000 and higher for premium lots.</p>
+        <div class="icon-text">
+          <!-- @import assets/svg/registration.svg -->
+          <h3>Registration</h3>
         </div>
+        <p>All bidders must register at least 48 hours before the auction. Valid identification and proof of funds may be required.</p>
       </div>
 
       <div class="participate-card">
-        <div class="participate-icon">◎</div>
-          <div>
-            <h3>Absentee</h3>
-            <p>Cannot attend in person? Submit absentee bids or arrange phone bidding by contacting us in advance.</p>
-          </div>
+        <div class="icon-text">
+          <!-- @import assets/svg/buyer.svg -->
+          <h3>Buyer’s Premium</h3>
+        </div>
+        <p>A buyer’s premium of 25% is added to the hammer price. This includes insurance and handling.</p>
       </div>
 
       <div class="participate-card">
-        <div class="participate-icon">▣</div>
-          <div>
-            <h3>Viewing Schedule</h3>
-            <p>All lots are available for viewing 3 days prior to auction during business hours.</p>
-          </div>
+        <div class="icon-text">
+          <!-- @import assets/svg/payment.svg -->
+          <h3>Payment Terms</h3>
+        </div>
+        <p>Payment is due within 7 business days of the auction. We accept bank transfers and major cards.</p>
+      </div>
+
+      <div class="participate-card">
+        <div class="icon-text">
+          <!-- @import assets/svg/bidding.svg -->
+          <h3>Bidding Increments</h3>
+        </div>
+        <p>Bidding increments vary by lot value. Typically €100 for lots under €5,000 and higher for premium lots.</p>
+      </div>
+
+      <div class="participate-card">
+        <div class="icon-text">
+          <!-- @import assets/svg/absentee.svg -->
+          <h3>Absentee</h3>
+        </div>
+        <p>Cannot attend in person? Submit absentee bids or arrange phone bidding by contacting us in advance.</p>
+      </div>
+
+      <div class="participate-card">
+        <div class="icon-text">
+          <!-- @import assets/svg/schedule.svg -->
+          <h3>Viewing Schedule</h3>
+        </div>
+        <p>All lots are available for viewing 3 days prior to auction during business hours.</p>
       </div>
     </div>
   </section>
