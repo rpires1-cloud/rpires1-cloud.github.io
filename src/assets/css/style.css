@@ -206,7 +206,7 @@ li, a, address {
 .hero-title h1 {
     color: #fff;
     margin: 0;
-    line-height: 6rem;
+    line-height: 120%;
 }
 
 .hero-title .page-title {
