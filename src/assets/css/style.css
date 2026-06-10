@@ -834,6 +834,146 @@ li, a, address {
     margin-bottom: 80px;
 }
 
+/* --- About us --- */
+
+.values {
+  background-color: #262626;
+  color: #ffffff; 
+  padding: 48px 20px;
+  text-align: center;
+}
+
+.values h2 {
+  color: #fff;
+}
+
+.values h3 {
+    font-family: "Playfair Display", sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.values > p {
+    color: #fff;
+    Margin-bottom: 40px;
+}
+
+.value > p {
+  color: #fff; 
+  margin: 0;
+}
+
+.values-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.values-list .value {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 0.5rem;
+}
+
+.values-list .value svg {
+  width: 56px;
+  height: 56px;
+  margin-bottom: 12px;
+}
+
+.journey {
+  padding: 48px 40px;
+}
+
+.journey figure {
+  margin: 0 0 32px 0;
+  width: 100%;
+}
+
+.journey figure img {
+  width: 100%;
+  height: auto;
+}
+
+.our-journey h2 {
+  margin: 0 0 8px 0;
+}
+
+.our-journey > p {
+  margin-bottom: 24px;
+}
+
+.our-journey div {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.our-journey .year {
+  background-color: #6B6746;
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 5px 16px;
+  border-radius: 50px;
+  margin: 0;
+  min-width: 55px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.our-journey div p {
+    margin: 0;
+}
+
+.team {
+  padding: 48px 40px;
+}
+
+.team h2 {
+  margin: 0 0 8px 0;
+}
+
+.team > p {
+  margin: 0 0 32px 0;
+}
+
+.our-team {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.name {
+  font-family: "Playfair Display", sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+  margin-top: 0;
+}
+
+.our-team figure {
+  margin: 0 0 12px 0;
+  width: 100%;
+}
+
+.our-team figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.position {
+  margin: 0 0 12px 0;
+  color: #7E3C33;
+}
+
 /* --- Footer --- */
 
 .main-footer {
@@ -968,27 +1108,60 @@ li, a, address {
     padding: 40px 24px;
   }
 
-  .history h2 {
-    margin-bottom: 15px;
-    gap: 200px;
-  }
+.history h2 {
+margin-bottom: 15px;
+gap: 200px;
+}
 
-/* --- Footer --- */
-    .main-footer {
-    padding: 80px 40px;
+/* --- About --- */
+.values {
+    padding: 60px 40px;
   }
   
-  .footer-container {
+.values-list {
+    max-width: 720px;
+    margin: 0 auto;
+    gap: 32px 24px;
+}
+
+.journey {
+    padding: 60px 60px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.team {
+    padding: 60px 40px;
+}
+
+.our-team {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+  
+.name {
+    font-size: 1.3rem;
+}
+
+/* --- Footer --- */
+.main-footer {
+    padding: 80px 40px;
+}
+
+.footer-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 32px;
-  }
-  
-  .footer-bottom {
+}
+
+.footer-bottom {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-  }
+}
 }
 
 @media (min-width: 1024px) {
@@ -1293,11 +1466,7 @@ li, a, address {
         grid-row: 3;
     }
 
-
-
-     /* --- Categories --- */
-
-
+/* --- Categories --- */
     .categories-section .container {
         max-width: 1400px;
         margin: 0 auto;
@@ -1408,6 +1577,63 @@ li, a, address {
         height: 100%;
         object-fit: cover;
     }
+
+/* --- About --- */
+.values {
+    padding: 100px 110px;
+  }
+
+.values-list {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    max-width: 1400px;
+}
+
+.journey {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    padding: 100px 110px;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.journey figure {
+    flex: 1;
+    margin: 0;
+}
+
+  .journey figure img {
+    object-fit: cover;
+  }
+
+  .our-journey {
+    flex: 1;
+    padding: 0 0 0 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    text-align: left;
+  }
+
+  /* --- Seção Team --- */
+  .team {
+    padding: 100px 110px;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .team > p {
+    margin-bottom: 60px;
+  }
+
+  .our-team {
+    gap: 40px;
+  }
+
+  .name {
+    font-size: 1.5rem;
+  }
 
 
 /* --- contact page --- */
