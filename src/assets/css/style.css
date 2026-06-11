@@ -43,7 +43,7 @@ h3 {
   font-family: "Funnel Display", sans-serif;
   font-weight: 500;
   color: #000;
-
+  line-height: 140%;
 }
 
 p {
@@ -306,9 +306,153 @@ li, a, address {
     margin: 0;
 }
 
+/* --- Our Auctions --- */
+.sales-section {
+  background-color: #E9E9E6;
+  padding: 60px 60px;
+  box-sizing: border-box;
+}
+
+.sales-section .container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.section-heading,
+.participate-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.section-heading h2 {
+    text-align: left;
+    margin-bottom: 4px;
+}
+
+.section-heading p,
+.participate-header p {
+  font-size: 1rem;
+  color: #666666;
+  margin-top: 8px;
+  text-align: left;
+}
+
+.sales-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sale-card {
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+}
+
+.sale-card figure {
+  margin: 0;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.sale-card figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sale-content {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.sale-content > p:first-child {
+  font-size: 0.9rem;
+  color: #6B6B6B;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+  margin-top: 0;
+}
+
+.sale-content h3 {
+  font-size: 1.15rem;
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.sale-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 0;
+  border-top: 1px solid #EAEAEA;
+}
+
+.sale-footer p:first-child {
+  font-weight: 600;
+  color: #7E3C33;
+}
+
+.sale-footer p:last-child {
+  font-size: 0.9rem;
+  color: #8C8C8C;
+}
+
+.participation-container {
+  padding: 60px 60px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.participate-header h2 {
+    margin-bottom: 4px;
+}
+
+.participate-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.participate-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.icon-text {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.icon-text svg {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.icon-text h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #7E3C33;
+}
+
+.participate-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #555555;
+  margin-top: 0;
+}
+
 /* --- Upcoming auctions --- */
 .auctions-section {
-    padding: 64px 60px;
+    padding: 60px 60px;
 }
 
 .section-header {
@@ -975,7 +1119,7 @@ li, a, address {
 }
 
 /* --- Product Page --- */
-.product-info {
+.product-page-info {
   padding: 0 20px 0px 20px;
 }
 
@@ -1176,6 +1320,62 @@ li, a, address {
   color: #ffffff;
 }
 
+.modal {
+  display: none; 
+  position: fixed;
+  z-index: 2000; /* Ensures it sits above header/nav structures */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85); /* Smooth dark background */
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.modal.open {
+  display: flex;
+  opacity: 1;
+}
+
+.modal-wrapper {
+  position: relative;
+  max-width: 90%;
+  max-height: 85%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  background-color: #ffffff;
+  padding: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: #ffffff;
+  font-size: 42px;
+  font-weight: 300;
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.2s ease, transform 0.2s ease;
+  z-index: 2010;
+}
+
+.modal-close:hover {
+  color: #7E3C33;
+  transform: scale(1.1);
+}
+
 /* --- Footer --- */
 
 .main-footer {
@@ -1282,33 +1482,55 @@ li, a, address {
 }
 
 @media (min-width: 600px) {
+/* --- Our Auctions --- */
+.sales-section,
+.participation-container {
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.sales-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.participate-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.participate-header p {
+    text-align: center;
+}
 
 /* --- Upcoming auctions --- */
 .auctions-section {
-        padding: 80px 40px;
-    }
+    padding: 80px 40px;
+}
 
-    .section-header {
-        margin-bottom: 40px;
-    }
+.section-header {
+    margin-bottom: 40px;
+}
 
-    .auctions-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 24px;
-    }
+.auctions-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
 
-    .auction-card {
-        padding: 32px;
-    }
+.auction-card {
+    padding: 32px;
+}
 
-    .auction-date {
-        font-size: 0.85rem;
-    }
+.auction-date {
+    font-size: 0.85rem;
+}
 
 /* --- History meets elegance --- */
 .history {
     padding: 40px 24px;
-  }
+}
 
 .history h2 {
 margin-bottom: 15px;
@@ -1544,43 +1766,82 @@ product-info, .content-section, .notes-grid {
         font-weight: 500;
         margin: 0;
     }
+}
+
+/* --- Our Auctions --- */
+.sales-section,
+.participation-container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    padding-left: 170px;
+    padding-right: 170px;
+  }
+
+.section-heading,
+.participate-header {
+    margin-bottom: 48px;
+}
+
+.section-heading h2,
+.section-heading p,
+.participate-header h2,
+.participate-header p {
+    text-align: center;
+}
+
+.section-heading h2,
+.participate-header h2 {
+    margin-top: 0;
+}
+
+.sales-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.participate-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px 48px;
+}
 
 /* --- Upcoming auctions --- */
-    .auctions-section {
-        padding: 40px 60px;
-    }
+.auctions-section {
+    padding: 40px 60px;
+}
 
-    .section-header {
-        margin-bottom: 40px;
-    }
+.section-header {
+    margin-bottom: 40px;
+}
 
-    .section-header h2 {
-        margin-bottom: 15px;
-    }
+.section-header h2 {
+    margin-bottom: 15px;
+}
 
-    .auctions-grid {
-        gap: 32px;
-        grid-template-columns: 1fr 1fr;
-    }
+.auctions-grid {
+    gap: 32px;
+    grid-template-columns: 1fr 1fr;
+}
 
-    .auction-card {
-        padding: 40px;
-    }
+.auction-card {
+    padding: 40px;
+}
 
-    .auction-date {
-        font-size: 0.9rem;
-    }
+.auction-date {
+    font-size: 0.9rem;
+}
 
-    .auction-content h3 {
-        margin-top: 16px;
-    }
+.auction-content h3 {
+    margin-top: 16px;
+}
 
-    .auction-meta {
-        margin-top: 12px;
-        padding-top: 12px;
-        gap: 32px;
-        font-size: 1rem;
-    }
+.auction-meta {
+    margin-top: 12px;
+    padding-top: 12px;
+    gap: 32px;
+    font-size: 1rem;
+}
 /* --- Homepage --- */
 
 /* History meets elegance */
@@ -1859,9 +2120,8 @@ product-info, .content-section, .notes-grid {
   font-size: 1.5rem;
 }
 
-
 /* --- Product Page --- */
-.product-info,
+.product-page-info,
 .content-section,
 .notes-grid {
   max-width: 1200px;
@@ -1871,7 +2131,7 @@ product-info, .content-section, .notes-grid {
   box-sizing: border-box;
 }
 
-.product-info {
+.product-page-info {
   padding-top: 40px;
   padding-bottom: 40px;
 }
@@ -1924,6 +2184,16 @@ product-info, .content-section, .notes-grid {
   gap: 16px;
 }
 
+.modal-wrapper {
+    max-width: 75%;
+    max-height: 90%;
+}
+.modal-close {
+    top: 40px;
+    right: 50px;
+    font-size: 50px;
+}
+
 /* --- contact page --- */
 .hero-title p {
     font-size: 1.8rem;
@@ -1932,20 +2202,17 @@ product-info, .content-section, .notes-grid {
 }
 
 .contact-info-section.container {
-    max-width: 1400px; /* Alinhamento consistente com o resto do site */
+    max-width: 1400px;
     padding: 80px 110px;
 }
 
-/* Transforma a secção em duas colunas perfeitas */
 .info-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 180px; /* Espaço amplo e limpo entre o bloco esquerdo e direito */
+    gap: 180px; 
     align-items: start;
 }
 
-
-/* Corpo de texto e caixa com espaçamento do figma */
 .info-intro {
     gap: 32px;
 }
@@ -1999,6 +2266,5 @@ product-info, .content-section, .notes-grid {
 
 .social-links {
     gap: 32px;
-}
 }
 }
