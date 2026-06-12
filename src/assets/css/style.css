@@ -133,8 +133,8 @@ li, a, address {
     text-decoration: none;
     color: #000000;
     font-size: 1.1rem;
-    font-family: sans-serif;
     display: block;
+    font-family: "Funnel Display", sans-serif;
 }
 
 .main-header .menu-checkbox:checked ~ .nav-menu {
@@ -268,7 +268,7 @@ li, a, address {
     }
 }
 
-.featured-section .product-image img {
+.product-image img {
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
@@ -287,13 +287,6 @@ li, a, address {
     border-radius: 20px;
     white-space: nowrap; 
 }
-
-.featured-section .product-info {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
 .featured-section .product-info h3 {
     margin: 0;
 }
@@ -302,10 +295,9 @@ li, a, address {
     text-decoration: none;
 }
 
-
 .featured-section .product-info .price {
     font-family: sans-serif;
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     font-weight: 400;
     color: #6d3d33;
     margin: 0;
@@ -478,7 +470,6 @@ li, a, address {
     gap: 24px;
 }
 
-
 .auction-card {
     padding: 24px;
     color: #fff;
@@ -641,7 +632,6 @@ li, a, address {
         transform: scale(1.06);
         filter: brightness(0.75);
     }
-    
     /* Mantém o degradê original intacto, sem quebras secas */
     .gallery-item:hover::after {
         opacity: 1;
@@ -654,11 +644,6 @@ li, a, address {
     background-color: #ffffff;
 }
 
-.categories-section .container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
 .all-categories {
     display: flex;
     flex-direction: column;
@@ -669,11 +654,13 @@ li, a, address {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    position: relative;
 }
 
-.cat-1 h2, .cat-2 h2, .cat-3 h2 {
+.all-categories h2 {
     margin: 0;
-    padding-bottom: 15px;
+    padding-bottom: 25px;
+    text-align: left;
 }
 
 .category-gallery {
@@ -692,7 +679,6 @@ li, a, address {
     display: block;
     width: 100%;
     height: 100%;
-
     object-fit: cover;
 }
 
@@ -706,14 +692,11 @@ li, a, address {
 }
 
 .category-text {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 25px;
+    margin-top: 8px; 
 }
 
 .category-text p {
-    margin: 0;
+    margin: 0 0 25px 0;
 }
 
 .category-text .btn-outline {
@@ -746,11 +729,6 @@ li, a, address {
 
 .contact-info-section {
     padding: 40px 60px;
-}
-
-.contact-info-section.container {
-    max-width: 1200px;
-    margin: 0 auto;
 }
 
 .info-grid {
@@ -799,11 +777,6 @@ li, a, address {
     opacity: 0.9;
 }
 
-/* Lista de Contactos com Ícones */
-.info-details {
-    display: flex;
-    flex-direction: column;
-}
 
 .detail-item {
     display: flex;
@@ -831,7 +804,6 @@ li, a, address {
     margin: 0;
 }
 
-
 .contact-map {
     width: 100%;
     height: 380px; /* Altura ideal baseada na proporção do teu print */
@@ -844,12 +816,34 @@ li, a, address {
     height: 100%;
     border: none;
     display: block;
-    
-    /* Remove os filtros de cor padrão do browser para manter o mapa limpo */
-    filter: grayscale(0); 
 }
 
 /* --- Art page --- */
+.full-banner-armchair {
+    position: relative;
+    padding: 50px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/src/assets/img/georgian-era.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0 0 32px 0;
+    width: 100%;
+    height: 520px;
+}
+
+.full-banner-nouveau {
+    position: relative;
+    padding: 50px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/src/assets/img/art-nouveau-era.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0 0 32px 0;
+    width: 100%;
+    height: 520px;
+}
 
 /* secção shop by style*/
 .room-header {
@@ -881,27 +875,6 @@ li, a, address {
     padding-bottom: 20px;
 }
 
-/* ==========================================================================
-   BANNER DE AMBIENTE (Ponta a Ponta)
-   ========================================================================== */
-.full-banner {
-    margin: 0 0 32px 0;
-    width: 100%;
-    height: 520px;
-}
-
-.full-banner img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-
-
-/* ==========================================================================
-   GRELHA DE PRODUTOS E CARDS
-   ========================================================================== */
 .product-grid {
     padding: 0 70px; /* Alinha os produtos com o texto do cabeçalho */
     display: flex;
@@ -913,14 +886,14 @@ li, a, address {
 .product-card {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 8px;
 }
 
 .product-image {
     position: relative;
     margin: 0;
     width: 100%;
-    border: 1px solid ;
+    border: 1px solid #000;
     border-radius: 12px;
     overflow: hidden;
     aspect-ratio: 1 / 1;
@@ -934,7 +907,6 @@ li, a, address {
     }
 }
 
-
 .product-image img {
     display: block;
     width: 100%;
@@ -944,7 +916,6 @@ li, a, address {
     box-sizing: border-box;
 }
 
-/* O Badge de Época */
 .product-image .badge {
     position: absolute;
     top: 20px;
@@ -962,12 +933,12 @@ li, a, address {
 .product-info {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 6px;
     margin: 15px;
 }
 
 .product-info h3 {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     font-weight: 500;
     color: #000000;
     margin: 0;
@@ -975,7 +946,7 @@ li, a, address {
 
 .product-info .price {
     font-family: "Funnel Display", sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     color: #6d3d33;
     font-weight: 500;
     margin: 0;
@@ -1126,6 +1097,7 @@ li, a, address {
 }
 
 /* --- Product Page --- */
+
 .product-page-info {
   padding: 0 20px 0px 20px;
 }
@@ -1171,6 +1143,17 @@ li, a, address {
   object-fit: cover;
   display: block;
 }
+
+.product.active {
+    border: 1.5px solid #000000;
+    opacity: 100%;
+}
+
+.product {
+    opacity: 50%;
+    cursor: pointer;
+}
+
 .product-title{
     font-size: 2.5rem;
 }
@@ -1727,8 +1710,7 @@ product-info, .content-section, .notes-grid {
 
 /* --- featured section --- */
    .container{
-    margin-left: 110px;
-    margin-right: 110px;
+    padding: 0 110px;
    }
     
     /* Grelha em 4 colunas bem distribuídas */
@@ -1744,7 +1726,7 @@ product-info, .content-section, .notes-grid {
         padding: 10px; 
         width: 100%;
         height: auto; 
-        aspect-ratio: 4 / 4.6; 
+        aspect-ratio: 1 / 1; 
         box-sizing: border-box;
     }
 
@@ -1767,15 +1749,13 @@ product-info, .content-section, .notes-grid {
     }
 
     .featured-section .product-info h3 {
-        font-size: 1.45rem; 
+        font-size: 1.4rem; 
         line-height: 1.3;
         margin: 0;
     }
 
     .featured-section .product-info .price {
         font-size: 1.3rem; 
-        font-weight: 500;
-        margin: 0;
     }
 
 
@@ -1987,16 +1967,12 @@ product-info, .content-section, .notes-grid {
         font-weight: 700;
         padding: 0;
         line-height: 1;
-        letter-spacing: -0.1rem;
-        margin: 0 0 300px 0; 
+        margin: 0 0 25px 0; 
     }
 
     /* Bloco de texto */
     .category-text {
         max-width: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 32px;
     }
 
     /* Posicionamento da CAT 1 e CAT 3 */
@@ -2009,7 +1985,7 @@ product-info, .content-section, .notes-grid {
     .cat-1 .category-text, .cat-3 .category-text {
         grid-column: 1;
         grid-row: 1;       
-        margin-top: 76px;
+        margin-top: 0;
         align-self: start; 
     }
 
@@ -2028,7 +2004,7 @@ product-info, .content-section, .notes-grid {
     .cat-2 .category-text {
         grid-column: 2;
         grid-row: 1;       
-        margin-top: 76px;  
+        margin-top: 0;  
         align-self: start;
     }
 
@@ -2137,18 +2113,25 @@ product-info, .content-section, .notes-grid {
    
     display: grid;
         grid-template-columns: repeat(4, 1fr);
-        gap: 28px; /* Espaço entre as colunas */
+        gap: 28px; 
         width: 100%;
-        padding: 20px 110px;
+        padding: 20px 60px;
 }
 
 .room-header {
     padding: 20px 110px;
 }
+
+.product-info h3 {
+    font-size: 1.4rem;
+}
+
+.product-info p {
+    font-size: 1.3rem;
+}
     
 
 /* --- Product Page --- */
-
 
 .product-page-info,
 .content-section,
