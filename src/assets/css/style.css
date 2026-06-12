@@ -228,7 +228,7 @@ li, a, address {
 }
 
 .featured-section .section-header h2 {
-    margin: 0 60px;
+    margin: 0;
 }
 
 .featured-section .section-header p {
@@ -301,6 +301,14 @@ li, a, address {
     font-weight: 400;
     color: #6d3d33;
     margin: 0;
+}
+
+.featured-section .container {
+  padding: 0 70px;
+}
+
+.featured-section .container h2 {
+  margin-bottom: 12px;
 }
 
 /* --- Our Auctions --- */
@@ -554,7 +562,7 @@ li, a, address {
   width: 100%;
   margin: 0 auto;
   box-sizing: border-box;
-  padding: 40px 60px;
+  padding: 60px 60px;
 
 }
 
@@ -900,7 +908,7 @@ li, a, address {
     display: flex;
     flex-direction: column;
     gap: 52px;
-    margin-top: 60px;
+    margin-top: 40px;
 }
 
 .product-card {
@@ -1002,7 +1010,7 @@ li, a, address {
 
 .values > p {
     color: #fff;
-    Margin-bottom: 40px;
+    margin-bottom: 80px;
 }
 
 .value > p {
@@ -1021,6 +1029,7 @@ li, a, address {
   flex-direction: column;
   align-items: center;
   padding: 0 0.5rem;
+  min-width: 200px;
 }
 
 .values-list .value svg {
@@ -1044,7 +1053,7 @@ li, a, address {
 }
 
 .our-journey h2 {
-  margin: 0 0 8px 0;
+  margin: 0 0 15px 0;
 }
 
 .our-journey > p {
@@ -1080,7 +1089,7 @@ li, a, address {
 }
 
 .team h2 {
-  margin: 0 0 8px 0;
+  margin: 0 0 15px 0;
 }
 
 .team > p {
@@ -1120,7 +1129,7 @@ li, a, address {
 
 /* --- Product Page --- */
 .product-page-info {
-  padding: 0 20px 0px 20px;
+  padding: 60px 30px 0 30px;
 }
 
 .product-page-grid {
@@ -1222,7 +1231,7 @@ li, a, address {
 }
 
 .content-section {
-  padding: 40px 20px;
+  padding: 40px 30px;
 }
 
 .content-block {
@@ -1272,7 +1281,7 @@ li, a, address {
 }
 
 .notes-grid {
-  padding: 0 20px 60px 20px;
+  padding: 0 30px 60px 30px;
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -1554,6 +1563,10 @@ gap: 200px;
 .values {
     padding: 60px 40px;
   }
+
+.values h2 {
+  margin-bottom: 15px;
+}
   
 .values-list {
     max-width: 720px;
@@ -1589,6 +1602,10 @@ product-info, .content-section, .notes-grid {
     padding-right: 40px;
 }
 
+.product-page-info {
+    padding: 60px 110px 0 110px;
+}
+
 .btn {
     display: inline-block;
     align-self: flex-start;
@@ -1597,8 +1614,7 @@ product-info, .content-section, .notes-grid {
 
 .content-section,
 .notes-grid {
-    padding-left: 40px;
-    padding-right: 40px;
+    padding: 40px 110px;
 }
 
 /* --- Footer --- */
@@ -1720,7 +1736,6 @@ product-info, .content-section, .notes-grid {
         text-transform: uppercase;
         line-height: 1;
         letter-spacing: -0.2rem;
-        white-space: nowrap;
     }
 
     .hero-title h1 .page-title {
@@ -1889,6 +1904,10 @@ product-info, .content-section, .notes-grid {
         flex-direction: column;
         justify-content: end;
         padding: 0;
+    }
+
+    .history h2 {
+      margin-top: 0;
     }
 
 /* --- image gallery --- */
@@ -2068,7 +2087,7 @@ product-info, .content-section, .notes-grid {
 
 /* --- About --- */
 .values {
-  padding: 100px 110px;
+  padding: 100px 60px;
 }
 
 .values-list {
@@ -2135,7 +2154,7 @@ product-info, .content-section, .notes-grid {
         grid-template-columns: repeat(4, 1fr);
         gap: 28px; 
         width: 100%;
-        padding: 20px 60px;
+        padding: 0 110px;
 }
 
 .room-header {
@@ -2148,6 +2167,10 @@ product-info, .content-section, .notes-grid {
 
 .product-info p {
     font-size: 1.3rem;
+}
+
+.container h2 {
+  margin-bottom: 14px;
 }
     
 
